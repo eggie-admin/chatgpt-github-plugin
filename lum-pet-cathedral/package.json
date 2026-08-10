@@ -1,0 +1,22 @@
+{
+  "name": "lum-pet-cathedral",
+  "version": "0.2.0",
+  "private": true,
+  "description": "ChatGPT/Codex MCP Apps wizard for Lum ASCII scenes using native host-model generation; no provider API key required.",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @lum-cathedral/mcp-app",
+    "check": "npm run check --workspace @lum-cathedral/mcp-app",
+    "dev": "npm run dev --workspace @lum-cathedral/mcp-app",
+    "serve": "npm run serve --workspace @lum-cathedral/mcp-app",
+    "test": "npm run test --workspace @lum-cathedral/mcp-app",
+    "doctor": "node scripts/doctor.mjs",
+    "start": "npm run serve"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  }
+}
