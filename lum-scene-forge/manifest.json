@@ -1,0 +1,63 @@
+{
+  "schema": "hydra.lum-scene-forge/v1",
+  "name": "Lum Scene Forge",
+  "mode": "in_chat_wizard",
+  "actors": [
+    {
+      "id": "lum",
+      "label": "Lum",
+      "aka": "Eggie's Demon Waifu"
+    },
+    {
+      "id": "eggie",
+      "label": "Eggie",
+      "aka": "Wolverine / Eggie BagelFace"
+    },
+    {
+      "id": "cutie",
+      "label": "Cutie",
+      "aka": "GitHub Copilot AI"
+    }
+  ],
+  "wizard": [
+    {
+      "step": 1,
+      "id": "scene",
+      "type": "text",
+      "required": true,
+      "on_null": "repeat"
+    },
+    {
+      "step": 2,
+      "id": "actors",
+      "type": "multi_select",
+      "options": ["lum", "eggie", "cutie"],
+      "required": true,
+      "min_selected": 1,
+      "on_null": "repeat"
+    },
+    {
+      "step": 3,
+      "id": "dialogue",
+      "type": "text_plus_toggle",
+      "required": true,
+      "toggle": {
+        "id": "emoji_mode",
+        "type": "boolean",
+        "default": true
+      },
+      "on_null": "repeat"
+    }
+  ],
+  "completion": {
+    "actions": ["continue", "quit"],
+    "continue": "reset_scene_keep_preferences",
+    "quit": "clear_transient_state"
+  },
+  "generation": {
+    "format": "ascii_emoticon",
+    "default_variants": 6,
+    "copy_paste_friendly": true,
+    "preserve_quoted_dialogue": true
+  }
+}
