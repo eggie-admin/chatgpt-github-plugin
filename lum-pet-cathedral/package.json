@@ -8,11 +8,10 @@
   ],
   "scripts": {
     "build": "npm run build --workspace @lum-cathedral/mcp-app",
-    "check": "npm run check --workspace @lum-cathedral/mcp-app",
+    "check": "tsc -p tsconfig.json && npm run check --workspace @lum-cathedral/mcp-app",
     "dev": "npm run dev --workspace @lum-cathedral/mcp-app",
     "serve": "npm run serve --workspace @lum-cathedral/mcp-app",
     "test": "npm run test --workspace @lum-cathedral/mcp-app",
-    "doctor": "node scripts/doctor.mjs",
     "start": "npm run serve"
   },
   "engines": {
