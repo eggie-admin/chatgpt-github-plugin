@@ -1,0 +1,26 @@
+{
+  "name": "lum-pet-cathedral",
+  "version": "0.3.0",
+  "description": "Lum, Wolverine, and Cutie ASCII scene forge with a compact in-chat MCP Apps wizard.",
+  "author": {
+    "name": "Eggie Bagelface"
+  },
+  "repository": "https://github.com/eggie-admin/chatgpt-github-plugin",
+  "license": "MIT",
+  "keywords": ["lum", "ascii", "emoticon", "mcp", "pet", "wolverine"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Lum Pet Cathedral",
+    "shortDescription": "Summon Lum's ASCII scene forge.",
+    "longDescription": "A three-step in-chat wizard for compact Lum, Wolverine, and Cutie ASCII/emoticon scenes. The widget sends completed scene instructions back to the host conversation, so the plugin itself does not require a provider API key.",
+    "developerName": "Eggie Bagelface",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "defaultPrompt": [
+      "@Lum Pet Cathedral open the scene wizard.",
+      "@Lum Pet Cathedral professor-chaos.",
+      "@Lum Pet Cathedral whisky-logan."
+    ],
+    "brandColor": "#53FF9A"
+  }
+}
