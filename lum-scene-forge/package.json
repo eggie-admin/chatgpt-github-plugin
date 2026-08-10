@@ -1,0 +1,30 @@
+{
+  "name": "lum-scene-forge-mcp-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && tsc -p tsconfig.server.json && cross-env INPUT=mcp-app.html vite build",
+    "start": "concurrently --raw \"cross-env NODE_ENV=development INPUT=mcp-app.html vite build --watch\" \"tsx watch main.ts\"",
+    "serve": "tsx main.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.7.5",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.0",
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0",
+    "vite-plugin-singlefile": "^2.3.0"
+  }
+}
