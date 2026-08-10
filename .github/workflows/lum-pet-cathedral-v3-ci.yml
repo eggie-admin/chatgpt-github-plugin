@@ -1,0 +1,25 @@
+name: Lum Pet Cathedral v3 CI
+
+on:
+  push:
+    branches: [feat/lum-pet-cathedral-v3-clean]
+  pull_request:
+    paths:
+      - "lum-pet-cathedral/**"
+      - ".github/workflows/lum-pet-cathedral-v3-ci.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lum-pet-cathedral
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run check
+      - run: npm run test
+      - run: npm run build
